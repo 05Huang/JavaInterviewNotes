@@ -1,0 +1,12 @@
+# Redis面试题
+
+## 一、Redis主从集群
+
+​	尽管单节点的Redis集群已经可以应对上万并发，但是当项目规模逐渐庞大，就必须进一步提高Redis的并发能力，我们可以通过搭建Redis主从集群来实现读写分离，提高并发能力。
+
+## 1.1 Redis主从集群结构
+
+![image-20251031215807659](C:\Users\34415\Desktop\JavaInterviewNotes\Redis\images\image-20251031215807659.png)
+
+主节点叫master，从节点叫slave，如果是写操作应该访问master，由master主节点将数据同步给slave从节点，如果是读操作，由各个slave节点分担进行。
+
