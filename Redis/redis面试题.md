@@ -6,7 +6,7 @@
 
 ## 1.1 Redis主从集群结构
 
-![image-20251031215807659](C:\Users\34415\Desktop\JavaInterviewNotes\Redis\images\image-20251031215807659.png)
+![image-20251031221028687](./images/image-20251031221028687.png)
 
 主节点叫master，从节点叫slave，如果是写操作应该访问master，由master主节点将数据同步给slave从节点，如果是读操作，由各个slave节点分担进行。
 
